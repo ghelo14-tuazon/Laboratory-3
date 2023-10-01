@@ -1,0 +1,8 @@
+Default 
+Admin Page 
+email:admin@gmail.com
+password:12345
+
+Customer Page
+email:user.test@gmail.com
+password:12345678
