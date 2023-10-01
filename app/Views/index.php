@@ -271,17 +271,16 @@
 <!-- User -->
 <script>
 // Check if the user is logged out and trying to access a specific page
-window.addEventListener('load', function (event) {
-    var page = event.target;
-        var adminSessionData = <?= json_encode(session()->get('user_id')) ?>;  // Check your user session variable name
+window.addEventListener('load', function () {
+    var userIsLoggedIn = <?= json_encode(session()->get('user_id')) ?>;  // Check your user session variable name
 
     if (!userIsLoggedIn && window.location.pathname !== 'userlogin') {
         // If the user is logged out and not on the user login page, redirect them to the login page
         window.location.href = 'userlogin'; // Replace with your actual login page URL
     }
 });
-
 </script>
+
 
 </body>
 
